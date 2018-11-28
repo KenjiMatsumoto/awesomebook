@@ -5,4 +5,5 @@ customer_tb, hotel_tb, reserve_tb = load_hotel_reserve()
 # drop関数によって、不要な列を削除
 # axisを1にすることによって、列の削除を指定
 # inplaceをTrueに指定することによって、reserve_tbの書き換えを指定
-reserve_tb.drop(['people_num', 'total_price'], axis=1, inplace=True)
+df = reserve_tb.drop(['people_num', 'total_price'], axis=1, inplace=True)
+print(df)
